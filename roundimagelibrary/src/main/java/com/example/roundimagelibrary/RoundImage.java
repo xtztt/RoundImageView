@@ -112,13 +112,14 @@ public class RoundImage extends ImageView {
         if (drawable == null) {
             throw new Resources.NotFoundException("Image resource not set");
         } else {
-            bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
-                    Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas();
-            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(),
-                    drawable.getIntrinsicHeight());
-            drawable.draw(canvas);
-            return bitmap;
+//             bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
+//                     Bitmap.Config.ARGB_8888);
+//             Canvas canvas = new Canvas();
+//             drawable.setBounds(0, 0, drawable.getIntrinsicWidth(),
+//                     drawable.getIntrinsicHeight());
+//             drawable.draw(canvas);
+//             return bitmap;
+            return ((BitmapDrawable)drawable).getBitmap;
         }
     }
 }
